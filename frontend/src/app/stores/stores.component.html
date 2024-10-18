@@ -1,0 +1,15 @@
+<div class="stores-container">
+    <h2>Stores</h2>
+    <div *ngIf="getUserRole() === 'admin'" class="create-store-form">
+      <h3>Create New Store</h3>
+      <input type="text" placeholder="Store Name" [(ngModel)]="newStoreName" required>
+      <input type="text" placeholder="Store Type" [(ngModel)]="newStoreType">
+      <button (click)="createStore()">Create Store</button>
+    </div>
+    <div *ngFor="let store of stores" class="store-item">
+      <h3>{{ store.name }}</h3>
+      <p>Type: {{ store.type }}</p>
+      <a [routerLink]="['/stores', store.id, 'products']">View Products</a>
+    </div>
+  </div>
+  

@@ -1,0 +1,15 @@
+<div class="products-container">
+  <h2>Products in Store</h2>
+  <div *ngIf="getUserRole() === 'admin'" class="create-product-form">
+    <h3>Add New Product</h3>
+    <input type="text" placeholder="Product Name" [(ngModel)]="newProductName" required>
+    <textarea placeholder="Product Description" [(ngModel)]="newProductDescription"></textarea>
+    <input type="number" placeholder="Product Price" [(ngModel)]="newProductPrice" required>
+    <button (click)="addProduct()">Add Product</button>
+  </div>
+  <div *ngFor="let product of products" class="product-item">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price | currency }}</p>
+  </div>
+</div>
