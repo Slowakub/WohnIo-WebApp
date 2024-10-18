@@ -31,7 +31,6 @@
 ### 3. Database Setup (MongoDB)
 - Ensure that MongoDB is installed and running locally.
 - MongoDB runs by default on port 27017.
-- The backend will connect to the MongoDB instance using the MONGODB_URI provided in the .env file.
 
 
 Jakub Belzar
