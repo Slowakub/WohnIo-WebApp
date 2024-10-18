@@ -18,10 +18,6 @@
 - **`frontend/`**: Angular frontend code
 
 ### 1. Backend Setup (NestJS)
-- Create an .env file in the backend directory with the follwoing content:
-PORT=3000
-MONGODB_URI=mongodb://127.0.0.1:27017/nest
-JWT_SECRET=SecretKey
 
 - cd backend
 - npm install
